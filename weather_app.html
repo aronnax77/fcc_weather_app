@@ -1,0 +1,54 @@
+<!-- Author: Richard Myatt
+     Date: 20 November 2017
+
+An exercise.  A weather app for SL.  This could be extended to include geo
+location to determine the local weather but this requires https support and
+does not appear to be something for which the code playground can be used.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/weather_app.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather App</title>
+</head>
+<body>
+
+  <div class="form">
+
+    <header>
+      <h1>Weather App</h1>
+    </header>
+    <br><br>
+
+    <!-- form elements to allow the input of latitude and longitude -->
+    <p>Please enter your location to see the weather in your area.  The default
+    here is Kuala Lumpur, Malaysia.</p>
+    <label for="lat">Latitude: </label><br>
+    <input class="lat" type="text" name="lat"><br>
+    <label for="long">Longitude: </label>
+    <input class="long" type="text" name="long"><br>
+    <button type="button" onclick="getStats()">Submit</button>
+    <br><br>
+
+    <!-- weather app panel set initially for Kuala Lumpur, Malaysia -->
+    <div class="panel">
+      <div class="inner"><p class="local"></p></div>
+      <div class="inner"><img src="#" alt="Weather icon"></div>
+      <div class="inner"><p class="description"></p></div>
+      <div class="inner">
+        <div class="combine">
+          <span class="temperature"></span><a href="#" onclick="convertTemp()">C</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/weather_app.js"></script>
+
+</body>
+</html>

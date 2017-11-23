@@ -1,0 +1,109 @@
+/* Author: Richard Myatt
+     Date: 20 November 2017
+
+An exercise.  A weather app for SL.  This could be extended to include geo
+location to determine the local weather but this requires https support and
+does not appear to be something for which the code playground can be used.
+*/
+
+h1 {
+  text-align: center;
+}
+
+.form, .panel {
+  text-align: left;
+  width: 36vw;
+  height: 12vw;
+  margin: 0 auto 40px;
+}
+
+input {
+  margin-bottom: 10px;
+  width: 95%;
+}
+
+button {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: orange;
+}
+
+.panel {
+  text-align: center;
+  font-size: 1.4vw;
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+}
+
+.inner {
+  position: relative;
+  float: left;
+  width: 18vw;
+  height: 6vw;
+}
+
+.panel p, img, .combine {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.panel p {
+  transform: translate(-50%, -100%);
+}
+
+img {
+  width: 6vw;
+  transform: translate(-50%, -40%);
+}
+
+.combine {
+  transform: translate(-50%, 0);
+}
+
+a {
+  color: yellow;
+}
+
+@media only screen and (max-width:1200px) {
+  /* For medium size screens: */
+  .form, .panel {
+    width: 72vw;
+    height: 24vw;
+  }
+
+  .inner {
+    width: 36vw;
+    height: 12vw;
+  }
+
+  .panel {
+    font-size: 2.4vw;
+  }
+
+  img {
+    width: 12vw;
+  }
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile devices: */
+  .form, .panel {
+    width: 96vw;
+    height: 32vw;
+  }
+
+  .inner {
+    width: 48vw;
+    height: 16vw;
+  }
+
+  .panel {
+    font-size: 3.5vw;
+  }
+
+  img {
+    width: 24vw;
+  }
+}
